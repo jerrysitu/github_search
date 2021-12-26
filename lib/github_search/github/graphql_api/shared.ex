@@ -18,6 +18,7 @@ defmodule GithubSearch.GraphQLAPI.Shared do
               bioHTML
               name
               login
+              url
               watching(#{parse_pagination(position, cursor)}) {
                 totalCount
                 edges {

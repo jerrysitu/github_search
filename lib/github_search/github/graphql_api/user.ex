@@ -10,7 +10,8 @@ defmodule GithubSearch.GraphQLAPI.User do
     :html_url,
     :blog,
     :name,
-    :login
+    :login,
+    :url
   ]
 
   use ExConstructor
