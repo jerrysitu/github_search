@@ -20,3 +20,6 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 - Source: https://github.com/phoenixframework/phoenix
 
 # github_search
+
+https://hexdocs.pm/common_graphql_client/readme.html#documentation
+https://hexdocs.pm/common_graphql_client/CommonGraphQLClient.Caller.HttpTesla.html#content

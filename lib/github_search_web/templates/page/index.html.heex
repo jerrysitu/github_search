@@ -1,41 +1,10 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace of mind from prototype to production</p>
-</section>
+<div class="max-w-3xl px-2 mx-auto">
+  <div class="text-4xl font-semibold text-center">Github User Search</div>
+  <p class="mt-4 text-center text-gray-700">Look up a user in Github and return their watched repos</p>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.6/CHANGELOG.md">v1.6 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://web.libera.chat/#elixir">#elixir on Libera Chat (IRC)</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-      <li>
-        <a href="https://discord.gg/elixir">Elixir on Discord</a>
-      </li>
-    </ul>
-  </article>
-</section>
+  <div class="flex flex-col items-center mt-10 space-y-4">
+    <%= link "GraphQL Lookup", to: Routes.graph_ql_user_lookup_path(@conn, :graphql_user_lookup, %{}), class: "p-4 text-xl font-semibold bg-blue-500 border-2 border-blue-600 rounded-lg shadow-md cursor-pointer text-blue-50 w-min whitespace-nowrap hover:bg-blue-400" %>
+    <%= link "REST Lookup", to: Routes.rest_user_lookup_path(@conn, :rest_user_lookup, %{}), class: "p-4 text-xl font-semibold bg-blue-500 border-2 border-blue-600 rounded-lg shadow-md cursor-pointer text-blue-50 w-min whitespace-nowrap hover:bg-blue-400" %>
+  </div>
+
+</div>

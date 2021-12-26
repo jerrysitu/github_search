@@ -1,4 +1,4 @@
-defmodule GithubSearchWeb.UserLookupLive.PaginationComponent do
+defmodule GithubSearchWeb.RESTUserLookupLive.PaginationComponent do
   alias GithubSearchWeb.Router.Helpers, as: Routes
   use Phoenix.Component
 
@@ -10,7 +10,7 @@ defmodule GithubSearchWeb.UserLookupLive.PaginationComponent do
         [_, page] = link |> String.split("&page=")
 
         ~H"""
-          <%= live_patch label, to: Routes.user_lookup_path(socket, :user_lookup, %{"username" => username, "page" => page}), class: "text-blue-500 underline" %>
+          <%= live_patch label, to: Routes.rest_user_lookup_path(socket, :rest_user_lookup, %{"username" => username, "page" => page}), class: "text-blue-500 underline" %>
         """
 
       _ ->
