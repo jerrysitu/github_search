@@ -17,9 +17,10 @@ defmodule GithubSearchWeb.Router do
   scope "/", GithubSearchWeb do
     pipe_through :browser
 
-    # get "/", PageController, :index
+    get "/", PageController, :index
 
-    live "/", UserLookupLive, :user_lookup
+    live "/rest_lookup", RESTUserLookupLive, :rest_user_lookup
+    live "/graphql_lookup", GraphQLUserLookupLive, :graphql_user_lookup
   end
 
   # Other scopes may use custom stacks.

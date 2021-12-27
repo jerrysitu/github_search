@@ -10,8 +10,7 @@ defmodule GithubSearch.Github.Api.User do
     :html_url,
     :blog,
     :name,
-    :login,
-    :email
+    :login
   ]
 
   use ExConstructor

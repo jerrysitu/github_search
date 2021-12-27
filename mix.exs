@@ -46,7 +46,9 @@ defmodule GithubSearch.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:exconstructor, "~> 1.2.4"},
-      {:tesla, "~> 1.4.4"}
+      {:tesla, "~> 1.4.4"},
+      {:exsync, "~> 0.2.4", only: :dev},
+      {:recase, "~> 0.7.0"}
     ]
   end
 

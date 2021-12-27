@@ -1,7 +1,8 @@
-defmodule GithubSearchWeb.UserLookupLive do
+defmodule GithubSearchWeb.RESTUserLookupLive do
   use GithubSearchWeb, :live_view
   alias GithubSearch.Github.Api.{User, Subscriptions}
-  alias GithubSearchWeb.UserLookupLive.{UserAttributeComponent, PaginationComponent}
+  alias GithubSearchWeb.Components.UserAttributeComponent
+  alias GithubSearchWeb.RESTUserLookupLive.PaginationComponent
 
   @impl true
   def mount(_params, _session, socket) do
@@ -109,7 +110,7 @@ defmodule GithubSearchWeb.UserLookupLive do
      socket
      |> push_patch(
        to:
-         Routes.user_lookup_path(socket, :user_lookup, %{
+         Routes.rest_user_lookup_path(socket, :rest_user_lookup, %{
            "username" => username |> String.trim()
          })
      )}
