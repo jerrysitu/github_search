@@ -1,5 +1,7 @@
 # GithubSearch
 
+Look up a Github user and return their watched repos.
+
 To start your Phoenix server:
 
 - Set Environemnt Variable of `GITHUB_ACCESS_TOKEN` with Gihtub token
